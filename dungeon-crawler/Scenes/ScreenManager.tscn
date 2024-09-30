@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://be4u3oq63kkbq"]
+
+[ext_resource type="Script" path="res://Scripts/ScreenManager.gd" id="1_bl3md"]
+[ext_resource type="PackedScene" uid="uid://cpdc11e44xavu" path="res://Scenes/PlayerIcon.tscn" id="2_vswjm"]
+[ext_resource type="PackedScene" uid="uid://dn03jmnwipyy0" path="res://Scenes/Player.tscn" id="3_bskja"]
+
+[node name="ScreenManager" type="Node2D"]
+script = ExtResource("1_bl3md")
+
+[node name="Background" type="ColorRect" parent="."]
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5000.0
+offset_top = -5000.0
+offset_right = -4000.0
+offset_bottom = -4000.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+mouse_filter = 2
+color = Color(0.396078, 0.262745, 0.129412, 1)
+
+[node name="UnexploredBack" type="ColorRect" parent="."]
+visible = false
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -55000.0
+offset_top = -55000.0
+offset_right = -54000.0
+offset_bottom = -54000.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+mouse_filter = 2
+color = Color(0.28, 0.28, 0.28, 1)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="PlayerIcon" parent="Players" instance=ExtResource("2_vswjm")]
+
+[node name="Player" parent="Players/PlayerIcon" instance=ExtResource("3_bskja")]
+
+[node name="Events" type="Node2D" parent="."]

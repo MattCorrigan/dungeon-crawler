@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dohi7fqt5tnbf"]
+
+[ext_resource type="Script" path="res://Scripts/GridScreen.gd" id="1_oh40b"]
+[ext_resource type="PackedScene" uid="uid://d1qwqkleqi8sx" path="res://Scenes/GridHUD.tscn" id="3_6gcbi"]
+
+[node name="GridScreen" type="Node2D"]
+script = ExtResource("1_oh40b")
+
+[node name="Rooms" type="Node2D" parent="."]
+
+[node name="GridHUD" parent="." instance=ExtResource("3_6gcbi")]

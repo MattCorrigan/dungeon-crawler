@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0tik363u7k2n"]
+
+[ext_resource type="Script" path="res://Scripts/FightScreen.gd" id="1_3ydeb"]
+[ext_resource type="PackedScene" uid="uid://bhobp18oo1inu" path="res://Scenes/HUD.tscn" id="2_1kobn"]
+
+[node name="FightScreen" type="Node2D"]
+script = ExtResource("1_3ydeb")
+
+[node name="HUD" parent="." instance=ExtResource("2_1kobn")]

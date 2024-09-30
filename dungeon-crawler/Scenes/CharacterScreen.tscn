@@ -1,0 +1,138 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhfjntkxcoj8s"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterScreen.gd" id="1_ww0dv"]
+[ext_resource type="Theme" uid="uid://boae5h5x4m1gb" path="res://Themes/buttons.tres" id="2_cs3hj"]
+[ext_resource type="Theme" uid="uid://rjdw3um0f126" path="res://Themes/BigStat.tres" id="3_sy7j6"]
+[ext_resource type="Theme" uid="uid://bldq53n8ph21t" path="res://Themes/SmallStat.tres" id="4_rwlqp"]
+
+[node name="CharacterScreen" type="CanvasLayer"]
+script = ExtResource("1_ww0dv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 5000.0
+offset_bottom = 480.0
+color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="BackC" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -95.0
+offset_right = -25.0
+offset_bottom = -25.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_cs3hj")
+text = "Back"
+
+[node name="Endurance" type="Label" parent="."]
+offset_left = 10.0
+offset_right = 213.0
+offset_bottom = 45.0
+theme = ExtResource("3_sy7j6")
+text = "Endurance: #"
+
+[node name="Health" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 45.0
+offset_right = 150.0
+offset_bottom = 79.0
+theme = ExtResource("4_rwlqp")
+text = "Health: #/#"
+
+[node name="Protection" type="Label" parent="."]
+visible = false
+offset_left = 20.0
+offset_top = 75.0
+offset_right = 190.0
+offset_bottom = 109.0
+theme = ExtResource("4_rwlqp")
+text = "Protection: #%"
+
+[node name="Strength" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 110.0
+offset_right = 181.0
+offset_bottom = 155.0
+theme = ExtResource("3_sy7j6")
+text = "Strength: #"
+
+[node name="Damage" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 155.0
+offset_right = 144.0
+offset_bottom = 189.0
+theme = ExtResource("4_rwlqp")
+text = "Damage: #"
+
+[node name="CritChance" type="Label" parent="."]
+visible = false
+offset_left = 20.0
+offset_top = 185.0
+offset_right = 241.0
+offset_bottom = 219.0
+theme = ExtResource("4_rwlqp")
+text = "Critical Chance: #%"
+
+[node name="CritDamage" type="Label" parent="."]
+visible = false
+offset_left = 20.0
+offset_top = 215.0
+offset_right = 220.0
+offset_bottom = 249.0
+theme = ExtResource("4_rwlqp")
+text = "Critical Damage: +#%"
+
+[node name="Magic" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 250.0
+offset_right = 138.0
+offset_bottom = 295.0
+theme = ExtResource("3_sy7j6")
+text = "Magic: #"
+
+[node name="Mana" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 295.0
+offset_right = 138.0
+offset_bottom = 329.0
+theme = ExtResource("4_rwlqp")
+text = "Mana: #/#"
+
+[node name="SpellDamage" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 325.0
+offset_right = 206.0
+offset_bottom = 359.0
+theme = ExtResource("4_rwlqp")
+text = "Spell Damage: #"
+
+[node name="Agility" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 360.0
+offset_right = 143.0
+offset_bottom = 405.0
+theme = ExtResource("3_sy7j6")
+text = "Agility: #"
+
+[node name="Speed" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 405.0
+offset_right = 119.0
+offset_bottom = 439.0
+theme = ExtResource("4_rwlqp")
+text = "Speed: #"
+
+[node name="Evasion" type="Label" parent="."]
+visible = false
+offset_left = 20.0
+offset_top = 435.0
+offset_right = 157.0
+offset_bottom = 469.0
+theme = ExtResource("4_rwlqp")
+text = "Evasion: #%"
+
+[connection signal="pressed" from="BackC" to="." method="_on_back_c_pressed"]

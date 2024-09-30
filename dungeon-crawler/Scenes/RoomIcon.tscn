@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4gj28joggrp0"]
+
+[ext_resource type="Script" path="res://Scripts/RoomIcon.gd" id="1_ykw0o"]
+[ext_resource type="Texture2D" uid="uid://cdco73n0hq4v0" path="res://art/entrance.svg" id="2_bfh0n"]
+
+[node name="RoomIcon" type="Node2D"]
+script = ExtResource("1_ykw0o")
+
+[node name="Primary" type="ColorRect" parent="."]
+visible = false
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0.49, 0.49, 0.49, 1)
+
+[node name="Entrance" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(128, 128)
+texture = ExtResource("2_bfh0n")
+
+[node name="ExitNotUsed" type="Sprite2D" parent="."]
+visible = false
+
+[node name="Exit" type="ColorRect" parent="."]
+visible = false
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0.760784, 0, 0, 1)
+
+[node name="Unexplored" type="ColorRect" parent="."]
+visible = false
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0.28, 0.28, 0.28, 1)

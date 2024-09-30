@@ -1,0 +1,99 @@
+[gd_scene load_steps=3 format=3 uid="uid://btsu645bs48qx"]
+
+[ext_resource type="Script" path="res://Scripts/LevelScreen.gd" id="1_vofmk"]
+[ext_resource type="Theme" uid="uid://boae5h5x4m1gb" path="res://Themes/buttons.tres" id="2_kdiww"]
+
+[node name="LevelScreen" type="CanvasLayer"]
+script = ExtResource("1_vofmk")
+
+[node name="Stats" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Endurance" type="Button" parent="Stats"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -80.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kdiww")
+text = "Endurance"
+
+[node name="Strength" type="Button" parent="Stats"]
+offset_left = 10.0
+offset_top = -80.0
+offset_right = 210.0
+offset_bottom = -10.0
+theme = ExtResource("2_kdiww")
+text = "Strength"
+
+[node name="Magic" type="Button" parent="Stats"]
+offset_left = -210.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 80.0
+theme = ExtResource("2_kdiww")
+text = "Magic"
+
+[node name="Agility" type="Button" parent="Stats"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 80.0
+theme = ExtResource("2_kdiww")
+text = "Agility"
+
+[node name="Skills" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Skill1" type="Button" parent="Skills"]
+offset_right = 200.0
+offset_bottom = 70.0
+theme = ExtResource("2_kdiww")
+text = "Skill"
+
+[node name="Traits" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Trait1" type="Button" parent="Traits"]
+offset_right = 200.0
+offset_bottom = 70.0
+theme = ExtResource("2_kdiww")
+text = "Trait"
+
+[connection signal="pressed" from="Stats/Endurance" to="." method="_on_endurance_pressed"]
+[connection signal="pressed" from="Stats/Strength" to="." method="_on_strength_pressed"]
+[connection signal="pressed" from="Stats/Magic" to="." method="_on_magic_pressed"]
+[connection signal="pressed" from="Stats/Agility" to="." method="_on_agility_pressed"]
+[connection signal="pressed" from="Skills/Skill1" to="." method="_on_skill_1_pressed"]
+[connection signal="pressed" from="Traits/Trait1" to="." method="_on_trait_1_pressed"]

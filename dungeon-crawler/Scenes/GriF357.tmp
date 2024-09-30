@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dohi7fqt5tnbf"]
+
+[ext_resource type="Script" path="res://Scripts/GridScreen.gd" id="1_oh40b"]
+[ext_resource type="PackedScene" uid="uid://cpdc11e44xavu" path="res://Scenes/PlayerIcon.tscn" id="2_boctx"]
+[ext_resource type="PackedScene" uid="uid://d1qwqkleqi8sx" path="res://Scenes/GridHUD.tscn" id="3_6gcbi"]
+
+[node name="GridScreen" type="Node2D"]
+script = ExtResource("1_oh40b")
+
+[node name="PlayerIcon" parent="." instance=ExtResource("2_boctx")]
+
+[node name="Rooms" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="GridHUD" parent="." instance=ExtResource("3_6gcbi")]

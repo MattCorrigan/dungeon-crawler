@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dygr21mhwm3yt"]
+
+[node name="Hallway" type="Node2D"]
+visible = false
+
+[node name="xunexplored" type="ColorRect" parent="."]
+visible = false
+offset_left = -11.0
+offset_top = -34.0
+offset_right = 11.0
+offset_bottom = 34.0
+color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[node name="x" type="ColorRect" parent="."]
+visible = false
+offset_left = -15.0
+offset_top = -34.0
+offset_right = 15.0
+offset_bottom = 34.0
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="yunexplored" type="ColorRect" parent="."]
+visible = false
+offset_left = -34.0
+offset_top = -11.0
+offset_right = 34.0
+offset_bottom = 11.0
+color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[node name="y" type="ColorRect" parent="."]
+visible = false
+offset_left = -34.0
+offset_top = -15.0
+offset_right = 34.0
+offset_bottom = 15.0
+color = Color(0.501961, 0.501961, 0.501961, 1)

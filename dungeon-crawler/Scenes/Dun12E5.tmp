@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dohi7fqt5tnbf"]
+
+[ext_resource type="Script" path="res://Scripts/DungeonGrid.gd" id="1_e3rvi"]
+[ext_resource type="PackedScene" uid="uid://cpdc11e44xavu" path="res://Scenes/PlayerIcon.tscn" id="2_k213t"]
+
+[node name="DungeonGrid" type="Node2D"]
+script = ExtResource("1_e3rvi")
+
+[node name="PlayerIcon" parent="." instance=ExtResource("2_k213t")]
+
+[node name="Object" type="Node2D" parent="."]

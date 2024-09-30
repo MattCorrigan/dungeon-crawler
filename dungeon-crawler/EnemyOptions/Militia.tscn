@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtmp6w8i1qcrb"]
+
+[ext_resource type="Script" path="res://EnemyOptions/EnemyScripts/Militia.gd" id="1_pyufa"]
+[ext_resource type="Texture2D" uid="uid://bbctegdpwq6na" path="res://art/Targeting.png" id="2_kqebl"]
+[ext_resource type="Texture2D" uid="uid://cijhy08e7ba7t" path="res://art/Militia.png" id="3_8ehvk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j3plc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kqebl")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"blink",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxpdc"]
+size = Vector2(195, 196)
+
+[node name="Militia" type="Area2D"]
+script = ExtResource("1_pyufa")
+
+[node name="Targeting" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_j3plc")
+animation = &"blink"
+frame = 1
+frame_progress = 0.459576
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_8ehvk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sxpdc")

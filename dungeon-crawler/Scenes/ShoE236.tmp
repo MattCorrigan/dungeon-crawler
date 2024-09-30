@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy5w4vsc8fgkj"]
+
+[ext_resource type="Script" path="res://Scripts/ShopScreen.gd" id="1_evvum"]
+[ext_resource type="Theme" uid="uid://boae5h5x4m1gb" path="res://Themes/buttons.tres" id="2_kmill"]
+[ext_resource type="Theme" uid="uid://qsc4i4scr2gk" path="res://Themes/item.tres" id="3_mkjmw"]
+
+[node name="ShopScreen" type="CanvasLayer"]
+script = ExtResource("1_evvum")
+
+[node name="BackS" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -95.0
+offset_right = -25.0
+offset_bottom = -25.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_kmill")
+text = "Back"
+
+[node name="Buy" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Description" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ScrollC" type="ScrollContainer" parent="."]
+offset_right = 480.0
+offset_bottom = 480.0
+
+[node name="GridC" type="GridContainer" parent="ScrollC"]
+layout_mode = 2
+columns = 2
+
+[node name="Healing" type="Button" parent="ScrollC/GridC"]
+layout_mode = 2
+theme = ExtResource("3_mkjmw")
+text = "Healing"
+
+[node name="Mana" type="Button" parent="ScrollC/GridC"]
+layout_mode = 2
+theme = ExtResource("3_mkjmw")
+text = "Mana"
+
+[connection signal="pressed" from="BackS" to="." method="_on_back_s_pressed"]
+[connection signal="pressed" from="ScrollC/GridC/Healing" to="." method="_on_healing_pressed"]
+[connection signal="pressed" from="ScrollC/GridC/Mana" to="." method="_on_mana_pressed"]
